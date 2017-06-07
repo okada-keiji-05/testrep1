@@ -1,0 +1,2908 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PSOBB EP4 ver3.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+     <link href="css/style.css" rel="stylesheet">
+    
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  <meta charset="utf-8">
+  <script type="text/javascript" src="js/jquery-latest.js"></script> 
+  <script type="text/javascript" src="js/jquery.tablesorter.js"></script> 
+  <script type="text/javascript">
+  $(function() {
+  		$("table").tablesorter({debug: true})	
+  	});
+  </script>
+  </head>
+  <body>
+   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="index.html">PSOBB EP4 ver3.0</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="index.html">ホーム</a></li>
+      <li><a href="quest.html">クエスト</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">レアドロップ<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="read.html">エピソード１</a></li>
+          <li><a href="read2.html">エピソード２</a></li>
+          <li><a href="read4.html">エピソード４</a></li>
+        </ul>
+      </li>
+       <li class="dropdown">
+       <a href="#" class="dropdown-toggle" data-toggle="dropdown">エネミーデータ<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="enemy1.html">エピソード１</a></li>
+          <li><a href="enemy2.html">エピソード２</a></li>
+          <li><a href="enemy4.html">エピソード４</a></li>
+		　<li><a href="reae.html">レアエネミー出現率</a></li>
+        </ul>
+      </li>
+       <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">アイテム<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="weapon.html">武器</a></li>
+         <li><a href="armor.html">鎧</a></li>
+         <li><a href="baria.html">盾</a></li>
+         <li><a href="unit.html">ユニット</a></li>
+         <li><a href="mag.html">マグ</a></li>
+         <li><a href="gousei.html">合成</a></li>
+        </ul>
+      </li>
+       <li><a href="gm.html">GM取引</a></li>
+    </ul>
+    
+    
+  </div><!-- /.navbar-collapse -->
+</nav>
+<div class="container" style="padding-top:100px;">
+<h2>盾について</h2>
+<p>基礎的な鎧には種別として「バリア」と「シールド」が存在し、バリアは全職業が装備可能<br>
+シールドはフォースのみ<span style="color:#b00">装備不可能</span>となっている。（レアアイテムについてはその限りではない）<br>
+盾は主に回避力と耐性を上昇させるが、レアアイテムの中には特異な効果を持つものが多数存在する。<br>
+下記表中の<span style="color:#b00">防御力や回避力内の()数値は</span>、ドロップ時に付与される<span style="color:#b00">防御・回避力の振れ幅</span>である。<br>
+<span style="color:#b00">赤文字アイテム名はオリジナルアイテム。赤文字数値は原作より変更された数値を示す。</span>
+</p>
+<table class="table table-condensed table-hover table-striped">
+<thead>
+  <TR>
+    <th style="width: 250px">アイテム名</th>
+    <Th style="width: 20px">必要LV</Th>
+    <Th style="width: 20px">レアリティ</Th>
+    <Th style="width: 100px">防御力</Th>
+    <Th style="width: 100px">回避力</Th>
+    <Th style="width: 100px">追加能力</Th>
+    <Th style="width: 20px">炎</Th>
+    <Th style="width: 20px">氷</Th>
+    <Th style="width: 20px">雷</Th>
+    <Th style="width: 20px">闇</Th>
+    <Th style="width: 20px">光</Th>
+    <Th style="width: 200px">備考</Th>
+    <Th style="width: 25px">Hmr</Th>
+    <Th style="width: 25px">Hnl</Th>
+    <Th style="width: 25px">Hct</Th>
+    <Th style="width: 25px">Hcl</Th>
+    <Th style="width: 25px">Rmr</Th>
+    <Th style="width: 25px">Rml</Th>
+    <Th style="width: 25px">Rct</Th>
+    <Th style="width: 25px">Rcl</Th>
+    <Th style="width: 25px">Fmr</Th>
+    <Th style="width: 25px">Fml</Th>
+    <Th style="width: 25px">Fnm</Th>
+    <Th style="width: 25px">Fnl</Th>
+  </TR>
+ </thead>
+  <tbody>
+  <tr>
+    <TD>■ バリア</TD>
+    <TD>1</TD>
+    <TD>0</TD>
+    <TD>2(5)</TD>
+    <TD>25(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">20</TD>
+    <TD style="background: #00BFFF;">20</TD>
+    <TD style="background: #FFFF66;">15</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <tr>
+    <TD>■ シールド</TD>
+    <TD>4</TD>
+    <TD>0</TD>
+    <TD>4(5)</TD>
+    <TD>32(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">20</TD>
+    <TD style="background: #00BFFF;">20</TD>
+    <TD style="background: #FFFF66;">15</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+      </TR>
+  <TR>
+    <TD>■ コアシールド</TD>
+    <TD>7</TD>
+    <TD>1</TD>
+    <TD>6(5)</TD>
+    <TD>40(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">18</TD>
+    <TD style="background: #00BFFF;">18</TD>
+    <TD style="background: #FFFF66;">15</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+      </TR>
+  <TR>
+    <TD>■ ギガシールド</TD>
+    <TD>10</TD>
+    <TD>2</TD>
+    <TD>8(5)</TD>
+    <TD>47(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">20</TD>
+    <TD style="background: #00BFFF;">20</TD>
+    <TD style="background: #FFFF66;">18</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+      </TR>
+  <TR>
+    <TD>■ ソウルバリア</TD>
+    <TD>13</TD>
+    <TD>3</TD>
+    <TD>10(5)</TD>
+    <TD>55(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">19</TD>
+    <TD style="background: #00BFFF;">19</TD>
+    <TD style="background: #FFFF66;">19</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD>■ ハードシールド</TD>
+    <TD>16</TD>
+    <TD>3</TD>
+    <TD>12(5)</TD>
+    <TD>57(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">20</TD>
+    <TD style="background: #00BFFF;">20</TD>
+    <TD style="background: #FFFF66;">20</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+      </TR>
+  <TR>
+    <TD>■ ブレイブバリア</TD>
+    <TD>19</TD>
+    <TD>4</TD>
+    <TD>14(5)</TD>
+    <TD>65(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">20</TD>
+    <TD style="background: #00BFFF;">20</TD>
+    <TD style="background: #FFFF66;">18</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD>■ ソリッドシールド</TD>
+    <TD>23</TD>
+    <TD>4</TD>
+    <TD>16(5)</TD>
+    <TD>72(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">20</TD>
+    <TD style="background: #00BFFF;">20</TD>
+    <TD style="background: #FFFF66;">20</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+      </TR>
+  <TR>
+    <TD>■ フレイムバリア</TD>
+    <TD>27</TD>
+    <TD>5</TD>
+    <TD>19(5)</TD>
+    <TD>85(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">30</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">0</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD>■ プラズマバリア</TD>
+    <TD>31</TD>
+    <TD>5</TD>
+    <TD>21(5)</TD>
+    <TD>92(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">30</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD>■ フリーズバリア</TD>
+    <TD>35</TD>
+    <TD>5</TD>
+    <TD>23(5)</TD>
+    <TD>100(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">30</TD>
+    <TD style="background: #FFFF66;">0</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD>■ サイキックバリア</TD>
+    <TD>39</TD>
+    <TD>6</TD>
+    <TD>26(5)</TD>
+    <TD>110(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">22</TD>
+    <TD style="background: #00BFFF;">21</TD>
+    <TD style="background: #FFFF66;">22</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD>■ ジェネラルシールド</TD>
+    <TD>43</TD>
+    <TD>6</TD>
+    <TD>29(5)</TD>
+    <TD>120(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">28</TD>
+    <TD style="background: #00BFFF;">19</TD>
+    <TD style="background: #FFFF66;">19</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+      </TR>
+  <TR>
+    <TD>■ プロテクトバリア</TD>
+    <TD>47</TD>
+    <TD>7</TD>
+    <TD>32(5)</TD>
+    <TD>130(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">25</TD>
+    <TD style="background: #00BFFF;">15</TD>
+    <TD style="background: #FFFF66;">25</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD>■ グロリアスシールド</TD>
+    <TD>51</TD>
+    <TD>7</TD>
+    <TD>35(5)</TD>
+    <TD>140(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">25</TD>
+    <TD style="background: #00BFFF;">25</TD>
+    <TD style="background: #FFFF66;">25</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+      </TR>
+  <TR>
+    <TD>■ インペリアルバリア</TD>
+    <TD>55</TD>
+    <TD>8</TD>
+    <TD>38(5)</TD>
+    <TD>150(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">28</TD>
+    <TD style="background: #00BFFF;">28</TD>
+    <TD style="background: #FFFF66;">20</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD>■ ガーディアンシールド</TD>
+    <TD>59</TD>
+    <TD>8</TD>
+    <TD>41(5)</TD>
+    <TD>160(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">10</TD>
+    <TD style="background: #00BFFF;">10</TD>
+    <TD style="background: #FFFF66;">10</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+      </TR>
+  <TR>
+    <TD>■ ディヴィニティバリア</TD>
+    <TD>63</TD>
+    <TD>8</TD>
+    <TD>44(5)</TD>
+    <TD>170(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">27</TD>
+    <TD style="background: #00BFFF;">30</TD>
+    <TD style="background: #FFFF66;">27</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD>■ アルティメットシールド</TD>
+    <TD>67</TD>
+    <TD>8</TD>
+    <TD>47(5)</TD>
+    <TD>180(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">30</TD>
+    <TD style="background: #00BFFF;">28</TD>
+    <TD style="background: #FFFF66;">28</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+      </TR>
+  <TR>
+    <TD>■ スピリチュアルシールド</TD>
+    <TD>71</TD>
+    <TD>8</TD>
+    <TD>50(5)</TD>
+    <TD>190(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">28</TD>
+    <TD style="background: #00BFFF;">28</TD>
+    <TD style="background: #FFFF66;">28</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+      </TR>
+  <TR>
+    <TD>■ セレスティアルシールド</TD>
+    <TD>75</TD>
+    <TD>8</TD>
+    <TD>52(5)</TD>
+    <TD>200(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">30</TD>
+    <TD style="background: #00BFFF;">30</TD>
+    <TD style="background: #FFFF66;">30</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> ＤＢの盾</TD>
+    <TD>66</TD>
+    <TD>10</TD>
+    <TD>67(<span style="color:#b00">70</span>)</TD>
+    <TD>67(10)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">25</TD>
+    <TD style="background: #00BFFF;">30</TD>
+    <TD style="background: #FFFF66;">25</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>同名の剣・鎧と装備すると回避力1.5倍</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> ＤＦの盾</TD>
+    <TD>100</TD>
+    <TD>11</TD>
+    <TD>60(85)</TD>
+    <TD>170(25)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">10</TD>
+    <TD style="background: #00BFFF;">16</TD>
+    <TD style="background: #FFFF66;">20</TD>
+    <TD style="background: #DCDCDC;">14</TD>
+    <TD style="background: #FFD700;">14</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> ＳパーツＶｅｒ１．１６</TD>
+    <TD><span style="color:#b00">27</span></TD>
+    <TD>10</TD>
+    <TD><span style="color:#b00">50</span>(8)</TD>
+    <TD><span style="color:#b00">60</span>(8)</TD>
+    <TD><span style="color:#b00">命中+5</span></TD>
+    <TD style="background: #DC143C;">15</TD>
+    <TD style="background: #00BFFF;">10</TD>
+    <TD style="background: #FFFF66;">30</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> ＳパーツＶｅｒ２．０１</TD>
+    <TD><span style="color:#b00">32</span></TD>
+    <TD>10</TD>
+    <TD><span style="color:#b00">45</span>(7)</TD>
+    <TD><span style="color:#b00">85</span>(7)</TD>
+    <TD>命中力+15</TD>
+    <TD style="background: #DC143C;">10</TD>
+    <TD style="background: #00BFFF;">10</TD>
+    <TD style="background: #FFFF66;">30</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> ＷＯＲＫＳガード</TD>
+    <TD>14</TD>
+    <TD>9</TD>
+    <TD><span style="color:#b00">30</span>(0)</TD>
+    <TD><span style="color:#b00">85</span>(0)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">5</TD>
+    <TD style="background: #00BFFF;">5</TD>
+    <TD style="background: #FFFF66;">5</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>EP2クエスト「それぞれの明日」にて入手可能</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> アシストバリア</TD>
+    <TD>6</TD>
+    <TD>9</TD>
+    <TD>2(5)</TD>
+    <TD>25(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">0?</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">0</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> アトリビュートウォル</TD>
+    <TD>41</TD>
+    <TD>10</TD>
+    <TD>75(10)</TD>
+    <TD>100(10)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;"><span style="color:#b00">20</span></TD>
+    <TD style="background: #00BFFF;"><span style="color:#b00">20</span></TD>
+    <TD style="background: #FFFF66;"><span style="color:#b00">20</span></TD>
+    <TD style="background: #DCDCDC;">5</TD>
+    <TD style="background: #FFD700;">5</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> <span style="color:#b00">ダークネスリング</span></TD>
+    <TD>80</TD>
+    <TD>10</TD>
+    <TD>20(0)</TD>
+    <TD>135(0)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">0</TD>
+    <TD style="background: #DCDCDC;">100</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> <span style="color:#b00">シャインリング</span></TD>
+    <TD>80</TD>
+    <TD>10</TD>
+    <TD>135(0)</TD>
+    <TD>20(0)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">0</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">100</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> <span style="color:#b00">ベルティストン</span></TD>
+    <TD>13</TD>
+    <TD>10</TD>
+    <TD>2(5)</TD>
+    <TD>25(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">0</TD>
+    <TD style="background: #DCDCDC;">10</TD>
+    <TD style="background: #FFD700;">15</TD>
+    <TD>グランツ1.75倍<br>
+	メギド貫通</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> イエローバリア</TD>
+    <TD>6</TD>
+    <TD>9</TD>
+    <TD>2(5)</TD>
+    <TD>25(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">0</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>対応アンプ<br>
+ラ・アンプ<br>
+デックスアンプ<br>
+メギドアンプ<br>
+ラックアンプ</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> <span style="color:#b00">ラ・マージ</span></TD>
+    <TD>26</TD>
+    <TD>10</TD>
+    <TD>2(5)</TD>
+    <TD>25(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">20</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD><p>ラフォイエ、ラバータ、ラゾンデ1.35倍<br>
+イエローバリアにラ・アンプを使用することで入手</p></TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> イエローリング</TD>
+    <TD>81</TD>
+    <TD>9</TD>
+    <TD>35(0)</TD>
+    <TD>130(0)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">5</TD>
+    <TD style="background: #00BFFF;">5</TD>
+    <TD style="background: #FFFF66;">5</TD>
+    <TD style="background: #DCDCDC;">5</TD>
+    <TD style="background: #FFD700;">5</TD>
+    <TD>EP2チャレンジ</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> イプシガード</TD>
+    <TD>102</TD>
+    <TD>10</TD>
+    <TD>120(74)</TD>
+    <TD>180(54)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">50または0(備考参照)</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">50または0(備考参照)</TD>
+    <TD style="background: #DCDCDC;">50または0(備考参照)</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>時間によって盾の色と耐性が変化<br />
+      紫:闇50　赤:炎50　黄:雷50<br />
+      耐性は炎→氷→雷→闇の順番で変化。<br />
+      合成：イプシガード＝匂う盾＋イプシロンの外装<br />
+      ロボのみ合成可能。</TD>
+    <TD style="background: #CCFFFF;">？</TD>
+    <TD style="background: #FFCCFF;">？</TD>
+    <TD style="background: #CCFFFF;">？</TD>
+    <TD style="background: #FFCCFF;">？</TD>
+    <TD style="background: #CCFFFF;">？</TD>
+    <TD style="background: #FFCCFF;">？</TD>
+    <TD style="background: #CCFFFF;">？</TD>
+    <TD style="background: #FFCCFF;">？</TD>
+    <TD style="background: #CCFFFF;">？</TD>
+    <TD style="background: #FFCCFF;">？</TD>
+    <TD style="background: #CCFFFF;">？</TD>
+    <TD style="background: #FFCCFF;">？</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> インビジブルガード</TD>
+    <TD>17</TD>
+    <TD>10</TD>
+    <TD>15(8)</TD>
+    <TD>70(8)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">18</TD>
+    <TD style="background: #00BFFF;">25</TD>
+    <TD style="background: #FFFF66;">30</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> ウェポンズシールド金</TD>
+    <TD>55</TD>
+    <TD>9</TD>
+    <TD>41(0)</TD>
+    <TD>100(0)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">0</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> ウェポンズシールド銀</TD>
+    <TD>55</TD>
+    <TD>9</TD>
+    <TD>30(0)</TD>
+    <TD>50(0)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">0</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> ウェポンズシールド銅</TD>
+    <TD>55</TD>
+    <TD>9</TD>
+    <TD>24(0)</TD>
+    <TD>25(0)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">0</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> ウサミミ</TD>
+    <TD><span style="color:#b00">58</span></TD>
+    <TD>9</TD>
+    <TD><span style="color:#b00">5</span>(0)</TD>
+    <TD><span style="color:#b00">130</span>(0)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">1</TD>
+    <TD style="background: #00BFFF;">1</TD>
+    <TD style="background: #FFFF66;">1</TD>
+    <TD style="background: #DCDCDC;">1</TD>
+    <TD style="background: #FFD700;">1</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> カザミノコテ</TD>
+    <TD>112</TD>
+    <TD>10</TD>
+    <TD>96(50)</TD>
+    <TD>235(15)</TD>
+    <TD>攻撃力+35</TD>
+    <TD style="background: #DC143C;">28</TD>
+    <TD style="background: #00BFFF;">28</TD>
+    <TD style="background: #FFFF66;">28</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> カスタムバリアＶｅｒ．００</TD>
+    <TD>66</TD>
+    <TD>10</TD>
+    <TD>65(<span style="color:#b00">65</span>)</TD>
+    <TD>65(<span style="color:#b00">65</span>)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">30</TD>
+    <TD style="background: #00BFFF;">30</TD>
+    <TD style="background: #FFFF66;">30</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>同名の銃・鎧と装備すると回避力1.5倍</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> ガラシア</TD>
+    <TD>101</TD>
+    <TD>10</TD>
+    <TD>130(0)</TD>
+    <TD>200(0)</TD>
+    <TD>　</TD>
+    <TD style="background: #DC143C;">34</TD>
+    <TD style="background: #00BFFF;">34</TD>
+    <TD style="background: #FFFF66;">34</TD>
+    <TD style="background: #DCDCDC;">24</TD>
+    <TD style="background: #FFD700;">24</TD>
+    <TD>ヤスミシリーズとのセットで命中力+30、攻撃スピード+0.2</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> <span style="color:#b00">メギストレージ</span></TD>
+    <TD>15</TD>
+    <TD>10</TD>
+    <TD>2(5)</TD>
+    <TD>25(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">10</TD>
+    <TD style="background: #DCDCDC;"><span style="color:#b00">50</span></TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>メギド貫通<br>
+イエローバリアにメギドアンプを使用することで入手</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> <span style="color:#b00">エクステンション</span></TD>
+    <TD>50</TD>
+    <TD>10</TD>
+    <TD>30(5)</TD>
+    <TD>30(5)</TD>
+    <TD>全ステータス+10</TD>
+    <TD style="background: #DC143C;">10</TD>
+    <TD style="background: #00BFFF;">10</TD>
+    <TD style="background: #FFFF66;">10</TD>
+    <TD style="background: #DCDCDC;">10</TD>
+    <TD style="background: #FFD700;">10</TD>
+    <TD>ブルーバリアにテンションアンプを使用することで入手</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> <span style="color:#b00">デュナミス</span></TD>
+    <TD>50</TD>
+    <TD>10</TD>
+    <TD>0(0)</TD>
+    <TD>0(0)</TD>
+    <TD>攻撃力+45</TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">0</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>レッドバリアにパワーアンプを使用することで入手</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> グリーンリング</TD>
+    <TD>81</TD>
+    <TD>8</TD>
+    <TD>35(0)</TD>
+    <TD>130(130)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">5</TD>
+    <TD style="background: #00BFFF;">5</TD>
+    <TD style="background: #FFFF66;">5</TD>
+    <TD style="background: #DCDCDC;">5</TD>
+    <TD style="background: #FFD700;">5</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> コンバットギア</TD>
+    <TD>66</TD>
+    <TD>10</TD>
+    <TD><span style="color:#b00">50</span>(0)</TD>
+    <TD><span style="color:#b00">100</span>(0)</TD>
+    <TD>攻撃力+<span style="color:#b00">20</span></TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">0</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> シークレットギア</TD>
+    <TD>41</TD>
+    <TD>10</TD>
+    <TD>75(10)</TD>
+    <TD>105(10)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">30</TD>
+    <TD style="background: #00BFFF;">20</TD>
+    <TD style="background: #FFFF66;">30</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> <span style="color:#b00">シュテルクスト</span></TD>
+    <TD>16</TD>
+    <TD>10</TD>
+    <TD>2(5)</TD>
+    <TD>25(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">0</TD>
+    <TD style="background: #DCDCDC;">15</TD>
+    <TD style="background: #FFD700;">10</TD>
+    <TD>シフタ、デバンドの範囲2倍<br>
+アシストバリアにシュテルアンプを使用することで入手</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> スタンドスティル</TD>
+    <TD>125</TD>
+    <TD>10</TD>
+    <TD>163(50)</TD>
+    <TD>175(15)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">20</TD>
+    <TD style="background: #00BFFF;">27</TD>
+    <TD style="background: #FFFF66;">20</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> ストライカープラス</TD>
+    <TD>112</TD>
+    <TD>11</TD>
+    <TD>80(0)</TD>
+    <TD>200(0)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">0</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>ヘブンストライカーとのセットで回避力+50</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> スリーシールズ</TD>
+    <TD>33</TD>
+    <TD>11</TD>
+    <TD>33(?)</TD>
+    <TD>33(?)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">33</TD>
+    <TD style="background: #00BFFF;">33</TD>
+    <TD style="background: #FFFF66;">33</TD>
+    <TD style="background: #DCDCDC;">33</TD>
+    <TD style="background: #FFD700;">33</TD>
+    <TD><span style="color:#b00">レスタ範囲2倍<br>
+ジェルン、ザルア範囲2倍</span></TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> セイクリッドガード</TD>
+    <TD>17</TD>
+    <TD>10</TD>
+    <TD><span style="color:#b00">30</span>(8)</TD>
+    <TD><span style="color:#b00">100</span>(8)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">20</TD>
+    <TD style="background: #00BFFF;">22</TD>
+    <TD style="background: #FFFF66;">18</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">15</TD>
+    <TD>毒状態になならなくなる</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> セーフティーハート</TD>
+    <TD>123</TD>
+    <TD>11</TD>
+    <TD>106(50)</TD>
+    <TD>248(15)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">25</TD>
+    <TD style="background: #00BFFF;">25</TD>
+    <TD style="background: #FFFF66;">25</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>インビジブルガードに魔石ハートキーを使用することで入手</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> セキュアフット</TD>
+    <TD>120</TD>
+    <TD>10</TD>
+    <TD>83(50)</TD>
+    <TD>230(15)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">20</TD>
+    <TD style="background: #00BFFF;">20</TD>
+    <TD style="background: #FFFF66;">20</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> <span style="color:#b00">オークロス</span></TD>
+    <TD>50</TD>
+    <TD>10</TD>
+    <TD>0(0)</TD>
+    <TD>0(0)</TD>
+    <TD>命中+20</TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">0</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>イエローバリアにデックスアンプを使用することで入手</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> デ・ロル・レ・シールド</TD>
+    <TD>102</TD>
+    <TD>10</TD>
+    <TD>180(?)</TD>
+    <TD>120(?)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">5</TD>
+    <TD style="background: #00BFFF;">15</TD>
+    <TD style="background: #FFFF66;">20</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">20</TD>
+    <TD>合成：デ・ロル・レ・シールド＝匂う盾＋デ・ロル・レの殻</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> <span style="color:#b00">ピオル</span></TD>
+    <TD>14</TD>
+    <TD>10</TD>
+    <TD>2(5)</TD>
+    <TD>25(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">0</TD>
+    <TD style="background: #DCDCDC;">10</TD>
+    <TD style="background: #FFD700;">15</TD>
+    <TD>ジェルン、ザルアの範囲2倍<br>
+アシストバリアにピオルアンプを使用することで入手</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> デルセイバーの盾</TD>
+    <TD>41</TD>
+    <TD>10</TD>
+    <TD>65(7)</TD>
+    <TD><span style="color:#b00">135</span>(7)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">0</TD>
+    <TD style="background: #DCDCDC;">25</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>デルセイバーの左手</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> トリポリックシールド</TD>
+    <TD>102</TD>
+    <TD>12</TD>
+    <TD>95(50)</TD>
+    <TD>231(15)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">20</TD>
+    <TD style="background: #00BFFF;">20</TD>
+    <TD style="background: #FFFF66;">25</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> トリポリックリフレクター</TD>
+    <TD>120</TD>
+    <TD>10</TD>
+    <TD>95(50)</TD>
+    <TD>235(15)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">22</TD>
+    <TD style="background: #00BFFF;">28</TD>
+    <TD style="background: #FFFF66;">22</TD>
+<!--
+    <TD style="background: #00BFFF;">22</TD>
+    <TD style="background: #FFFF66;">28</TD>
+-->
+    <TD style="background: #DCDCDC;">7</TD>
+    <TD style="background: #FFD700;">7</TD>
+    <TD>時々敵のテクニックによるダメージを無効化する。</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> ネコミミ</TD>
+    <TD><span style="color:#b00">58</span></TD>
+    <TD>9</TD>
+    <TD><span style="color:#b00">30</span>(0)</TD>
+    <TD><span style="color:#b00">100</span>(0)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">1</TD>
+    <TD style="background: #00BFFF;">1</TD>
+    <TD style="background: #FFFF66;">1</TD>
+    <TD style="background: #DCDCDC;">1</TD>
+    <TD style="background: #FFD700;">1</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> <span style="color:#b00">エスピリト</span></TD>
+    <TD>50</TD>
+    <TD>10</TD>
+    <TD>0(0)</TD>
+    <TD>0(0)</TD>
+    <TD>精神力+45</TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">0</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>ラフォイエ1.3倍<br>
+	グランツ1.5倍<br>
+ブルーバリアにマインドアンプを使用することで入手</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> パープルリング</TD>
+    <TD>81</TD>
+    <TD>8</TD>
+    <TD>35(0)</TD>
+    <TD>130(0)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">5</TD>
+    <TD style="background: #00BFFF;">5</TD>
+    <TD style="background: #FFFF66;">5</TD>
+    <TD style="background: #DCDCDC;">5</TD>
+    <TD style="background: #FFD700;">5</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> ハニカムリフレクタ</TD>
+    <TD>102</TD>
+    <TD>10</TD>
+    <TD>110(?)</TD>
+    <TD>140(?)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">25</TD>
+    <TD style="background: #00BFFF;">30</TD>
+    <TD style="background: #FFFF66;">25</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">5</TD>
+    <TD>停止時<br />
+      防御：鎧の基本防御力（付加は関係なし）の2分の1が総合防御力にプラス。<br />
+      回避：+70<br />
+  <br />
+      移動時<br />
+      基本の防御・回避数値に。<br />
+      （つまり、移動時が基本の能力らしいです。）<br />
+  <br />
+      攻撃時<br />
+      防御：鎧の基本防御力（負荷は関係なし）の2分の1が総合防御力からマイナス。<br />
+      回避：-70</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> ハンターウォル</TD>
+    <TD>41</TD>
+    <TD>9</TD>
+    <TD>70(0)</TD>
+    <TD>135(0)</TD>
+    <TD>攻撃力+15</TD>
+    <TD style="background: #DC143C;">20</TD>
+    <TD style="background: #00BFFF;">20</TD>
+    <TD style="background: #FFFF66;">20</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>クエスト「ガロンズショップ」の300p隠し景品</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> <span style="color:#b00">エレメンタル</span></TD>
+    <TD>6</TD>
+    <TD>10</TD>
+    <TD>2(5)</TD>
+    <TD>25(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">30</TD>
+    <TD style="background: #00BFFF;">30</TD>
+    <TD style="background: #FFFF66;">30</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>フォイエ、バータ、ゾンデの威力1.4倍<br>
+レッドバリアにエレメントアンプを使用することで入手</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> フォースウォル</TD>
+    <TD>41</TD>
+    <TD>9</TD>
+    <TD>65(0)</TD>
+    <TD>140(0)</TD>
+    <TD>精神力+20</TD>
+    <TD style="background: #DC143C;">15</TD>
+    <TD style="background: #00BFFF;">18</TD>
+    <TD style="background: #FFFF66;">20</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>クエスト「ガロンズショップ」の300p隠し景品</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> ブラックギア</TD>
+    <TD>33</TD>
+    <TD>9</TD>
+    <TD><span style="color:#b00">40</span>(0)</TD>
+    <TD><span style="color:#b00">140</span>(0)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">0</TD>
+    <TD style="background: #DCDCDC;"><span style="color:#b00">30</span></TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+ 
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> ブラックリング</TD>
+    <TD>81</TD>
+    <TD>9</TD>
+    <TD>35(0)</TD>
+    <TD>130(0)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">5</TD>
+    <TD style="background: #00BFFF;">5</TD>
+    <TD style="background: #FFFF66;">5</TD>
+    <TD style="background: #DCDCDC;">5</TD>
+    <TD style="background: #FFD700;">5</TD>
+    <TD>装備者が近くにいると地面から白いエフェクトが発生、一人につき全ての耐性が１０上昇。<br>
+>EP1クエスト「未来に向かって」にて入手可能 (ＶＨ以上で未来を最小限撃破で入手。（１８体）</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> ブルーバリア</TD>
+    <TD>6</TD>
+    <TD>9</TD>
+    <TD>2(5)</TD>
+    <TD>25(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">0</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>対応アンプ<br>
+マインドアンプ<br>
+フリーズアンプ<br>
+ｷﾞ･アンプ</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN><span style="color:#b00">ギ・マージ</span></TD>
+    <TD>25</TD>
+    <TD>10</TD>
+    <TD>2(5)</TD>
+    <TD>25(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">20</TD>
+    <TD style="background: #FFFF66;">0</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>ギフォイエ、ギバータ、ギゾンデ1.5倍<br>
+ブルーバリアにギ・アンプを使用することで入手</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> ブルーリング</TD>
+    <TD>81</TD>
+    <TD>8</TD>
+    <TD>35(0)</TD>
+    <TD>130(0)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">5</TD>
+    <TD style="background: #00BFFF;">5</TD>
+    <TD style="background: #FFFF66;">5</TD>
+    <TD style="background: #DCDCDC;">5</TD>
+    <TD style="background: #FFD700;">5</TD>
+    <TD>≪未実装≫</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> フロウウェンの盾</TD>
+    <TD>66</TD>
+    <TD>10</TD>
+    <TD>62(10)</TD>
+    <TD>70(<span style="color:#b00">70</span>)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">25</TD>
+    <TD style="background: #00BFFF;">22</TD>
+    <TD style="background: #FFFF66;">30</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>同名の剣・鎧と装備すると回避力1.5倍</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> ホワイトリング</TD>
+    <TD>81</TD>
+    <TD>8</TD>
+    <TD>35(0)</TD>
+    <TD>130(0)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">5</TD>
+    <TD style="background: #00BFFF;">5</TD>
+    <TD style="background: #FFFF66;">5</TD>
+    <TD style="background: #DCDCDC;">5</TD>
+    <TD style="background: #FFD700;">5</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> ライトリリーフ</TD>
+    <TD>17</TD>
+    <TD>10</TD>
+    <TD>20(7)</TD>
+    <TD><span style="color:#b00">110</span>(7)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">0</TD>
+    <TD style="background: #DCDCDC;"><span style="color:#b00">30</span></TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> ラグオルリング</TD>
+    <TD>101</TD>
+    <TD>12</TD>
+    <TD>105(0)</TD>
+    <TD>130(0)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">10</TD>
+    <TD style="background: #00BFFF;">10</TD>
+    <TD style="background: #FFFF66;">10</TD>
+    <TD style="background: #DCDCDC;">10</TD>
+    <TD style="background: #FFD700;">10</TD>
+    <TD>戦闘不能時、装備者の代わりに砕け散る</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> <span style="color:#b00">フォルトゥナ</span></TD>
+    <TD>50</TD>
+    <TD>10</TD>
+    <TD>0(0)</TD>
+    <TD>0(0)</TD>
+    <TD>運+30<br>
+イエローバリアにラックアンプを使用することで入手</TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">0</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> <span style="color:#b00">ミッドウィンター</span></TD>
+    <TD>19</TD>
+    <TD>10</TD>
+    <TD>2(5)</TD>
+    <TD>25(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">50</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>ギバータ1.8倍<br>
+ラバータのダメージ1.4倍<br>
+ブルーバリアにフリーズアンプを使用することで入手</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> ラフォイエマージ</TD>
+    <TD>18</TD>
+    <TD>10</TD>
+    <TD>2(5)</TD>
+    <TD>25(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">15</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">0</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>ラフォイエのダメージ1.3倍</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> リカバリバリア</TD>
+    <TD>6</TD>
+    <TD>9</TD>
+    <TD>2(5)</TD>
+    <TD>25(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">0</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>対応アンプ<br>
+ヒールアンプ<br>
+ベルティアンプ</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> リコのイヤリング</TD>
+    <TD>133</TD>
+    <TD>10</TD>
+    <TD>96(85)</TD>
+    <TD>237(25)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;"><span style="color:#b00">15</span></TD>
+    <TD style="background: #00BFFF;"><span style="color:#b00">15</span></TD>
+    <TD style="background: #FFFF66;"><span style="color:#b00">15</span></TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> リコのメガネ</TD>
+    <TD>148</TD>
+    <TD>12</TD>
+    <TD><span style="color:#b00">96</span>(<span style="color:#b00">85</span>)</TD>
+    <TD><span style="color:#b00">237</span>(<span style="color:#b00">85</span>)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">0</TD>
+    <TD style="background: #DCDCDC;"><span style="color:#b00">15</span></TD>
+    <TD style="background: #FFD700;"><span style="color:#b00">15</span></TD>
+    <TD>トラップが見えるようになる</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;"><span style="color:#b00">○</span></TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;"><span style="color:#b00">○</span></TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;"><span style="color:#b00">○</span></TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;"><span style="color:#b00">○</span></TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;"><span style="color:#b00">○</span></TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> リジェネレイトギア</TD>
+    <TD>66</TD>
+    <TD>10</TD>
+    <TD><span style="color:#b00">55</span>(7)</TD>
+    <TD><span style="color:#b00">100</span>(7)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">0</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>ガード時に最大HPの2%を回復</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> リジェネレイトギアＢ．Ｐ</TD>
+    <TD>101</TD>
+    <TD>10</TD>
+    <TD>90(7)</TD>
+    <TD>180(7)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">15</TD>
+    <TD style="background: #00BFFF;">15</TD>
+    <TD style="background: #FFFF66;">15</TD>
+    <TD style="background: #DCDCDC;">15</TD>
+    <TD style="background: #FFD700;">15</TD>
+    <TD>ガード時にHP、TPを最大値の2%分回復</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> リジェネレイトギア改</TD>
+    <TD>66</TD>
+    <TD>10</TD>
+    <TD><span style="color:#b00">70</span>(7)</TD>
+    <TD><span style="color:#b00">115</span>(7)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">0</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>ガード時に最大HP・TPの2%を回復</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> リジェネレイトギア試</TD>
+    <TD>41</TD>
+    <TD>10</TD>
+    <TD>40(7)</TD>
+    <TD>85(7)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">0</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> ルピカ</TD>
+    <TD>101</TD>
+    <TD>11</TD>
+    <TD>120(0)</TD>
+    <TD>180(0)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">12</TD>
+    <TD style="background: #00BFFF;">12</TD>
+    <TD style="background: #FFFF66;">12</TD>
+    <TD style="background: #DCDCDC;">25</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>シフタ、<span style="color:#b00">デバンド</span>距離２倍</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> <span style="color:#b00">クラシオン</span></TD>
+    <TD>11</TD>
+    <TD>10</TD>
+    <TD>2(5)</TD>
+    <TD>25(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">0</TD>
+    <TD style="background: #DCDCDC;">15</TD>
+    <TD style="background: #FFD700;">10</TD>
+    <TD>レスタ・アンティの範囲2倍<br>
+リカバリバリアにヒールアンプを使用することで入手</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> レッドバリア</TD>
+    <TD>6</TD>
+    <TD>9</TD>
+    <TD>2(5)</TD>
+    <TD>25(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">0</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>対応アンプ<br>
+シンプルアンプ<br>
+エレメントアンプ<br>
+パワーアンプ<br>
+</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> <span style="color:#b00">シンプルマージ</span></TD>
+    <TD>24</TD>
+    <TD>10</TD>
+    <TD>2(5)</TD>
+    <TD>25(5)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">5</TD>
+    <TD style="background: #00BFFF;">5</TD>
+    <TD style="background: #FFFF66;">5</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>フォイエ、バータ、ゾンデ1.7倍<br>
+レッドバリアにシンプルアンプを使用することで入手</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> レッドリング</TD>
+    <TD>108</TD>
+    <TD>11</TD>
+    <TD>130(85)</TD>
+    <TD>212(25)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">30</TD>
+    <TD style="background: #00BFFF;">30</TD>
+    <TD style="background: #FFFF66;">30</TD>
+    <TD style="background: #DCDCDC;">5</TD>
+    <TD style="background: #FFD700;">5</TD>
+    <TD>全能力値＋20、一定時間ごとにHPとTP回復</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> レンジャーウォル</TD>
+    <TD>41</TD>
+    <TD>9</TD>
+    <TD>70(0)</TD>
+    <TD>145(0)</TD>
+    <TD>命中力+20</TD>
+    <TD style="background: #DC143C;">15</TD>
+    <TD style="background: #00BFFF;">15</TD>
+    <TD style="background: #FFFF66;">18</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>クエスト「ガロンズショップ」の300p隠し景品</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> 円環天使</TD>
+    <TD>40</TD>
+    <TD>9</TD>
+    <TD>40(0)</TD>
+    <TD>60(0)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">0</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">50</TD>
+    <TD>グランツ1.2倍<br>
+	アンティ範囲2倍</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> 源平</TD>
+    <TD>80</TD>
+    <TD>10</TD>
+    <TD>158(0)</TD>
+    <TD>237(0)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">0</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>浅黄絲威褄取鎧と同時に装備すると全耐性+20<br />
+</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> 四神盾「黄龍」</TD>
+    <TD>101</TD>
+    <TD>11</TD>
+    <TD>95(?)</TD>
+    <TD>180(?)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">40</TD>
+    <TD style="background: #00BFFF;">40</TD>
+    <TD style="background: #FFFF66;">40</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>四神盾「玄武」「白虎」「青竜」「朱雀」をそろえてＧＭと交換<br>
+ＰＢ/クリエイト内蔵<br />
+</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> 四神盾「玄武」</TD>
+    <TD>51</TD>
+    <TD>9</TD>
+    <TD>45(0)</TD>
+    <TD>80(0)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">10</TD>
+    <TD style="background: #00BFFF;">10</TD>
+    <TD style="background: #FFFF66;">30</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> 四神盾「朱雀」</TD>
+    <TD>51</TD>
+    <TD>9</TD>
+    <TD>50(0)</TD>
+    <TD>100(0)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">30</TD>
+    <TD style="background: #00BFFF;">20</TD>
+    <TD style="background: #FFFF66;">10</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> 四神盾「青龍」</TD>
+    <TD>51</TD>
+    <TD>9</TD>
+    <TD>50(0)</TD>
+    <TD>100(0)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">20</TD>
+    <TD style="background: #00BFFF;">20</TD>
+    <TD style="background: #FFFF66;">20</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> 四神盾「白虎」</TD>
+    <TD>51</TD>
+    <TD>9</TD>
+    <TD>45(0)</TD>
+    <TD>80(0)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">10</TD>
+    <TD style="background: #00BFFF;">10</TD>
+    <TD style="background: #FFFF66;">30</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> 匂う盾</TD>
+    <TD>51</TD>
+    <TD>9</TD>
+    <TD>50(70?)</TD>
+    <TD>55(74?)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">0</TD>
+    <TD style="background: #00BFFF;">0</TD>
+    <TD style="background: #FFFF66;">0</TD>
+    <TD style="background: #DCDCDC;">20</TD>
+    <TD style="background: #FFD700;">0</TD>
+    <TD>
+      合成：デ・ロル・レ・シールド＝匂う盾＋デ・ロル・レの殻</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> 八咫鏡</TD>
+    <TD>120</TD>
+    <TD>10</TD>
+    <TD>40(0)</TD>
+    <TD>200(0)</TD>
+    <TD>攻撃力+10</TD>
+    <TD style="background: #DC143C;">12</TD>
+    <TD style="background: #00BFFF;">12</TD>
+    <TD style="background: #FFFF66;">12</TD>
+    <TD style="background: #DCDCDC;">0</TD>
+    <TD style="background: #FFD700;">25</TD>
+    <TD>フォイエ、バータ、ゾンデ1.4倍、攻撃力+10</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+    <TD style="background: #CCFFFF;">×</TD>
+    <TD style="background: #FFCCFF;">×</TD>
+      </TR>
+  <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> 淵ヨリ来ルモノ</TD>
+    <TD>150</TD>
+    <TD>12</TD>
+    <TD>160(0)</TD>
+    <TD>240(0)</TD>
+    <TD>-</TD>
+    <TD style="background: #DC143C;">20</TD>
+    <TD style="background: #00BFFF;">32</TD>
+    <TD style="background: #FFFF66;">40</TD>
+    <TD style="background: #DCDCDC;">28</TD>
+    <TD style="background: #FFD700;">28</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+        <TR>
+    <TD><SPAN style="color: #CCCC00;">■</SPAN> ペリオドゥス</TD>
+    <TD>50</TD>
+    <TD>12</TD>
+    <TD>50(0)</TD>
+    <TD>50(0)</TD>
+    <TD>全ステータス+15</TD>
+    <TD style="background: #DC143C;">15</TD>
+    <TD style="background: #00BFFF;">15</TD>
+    <TD style="background: #FFFF66;">15</TD>
+    <TD style="background: #DCDCDC;">15</TD>
+    <TD style="background: #FFD700;">15</TD>
+    <TD>-</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+    <TD style="background: #CCFFFF;">○</TD>
+    <TD style="background: #FFCCFF;">○</TD>
+      </TR>
+      <tbody>
+</table>
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
