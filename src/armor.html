@@ -1,0 +1,2434 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PSOBB EP4 ver3.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+     <link href="css/style.css" rel="stylesheet">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  <meta charset="utf-8">
+ <script type="text/javascript" src="js/jquery-latest.js"></script> 
+<script type="text/javascript" src="js/jquery.tablesorter.js"></script> 
+<script type="text/javascript">
+$(function() {
+		$("table").tablesorter({debug: true})	
+	});
+</script>
+  </head>
+  <body>
+   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="index.html">PSOBB EP4 ver3.0</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="index.html">ホーム</a></li>
+      <li><a href="quest.html">クエスト</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">レアドロップ<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="read.html">エピソード１</a></li>
+          <li><a href="read2.html">エピソード２</a></li>
+          <li><a href="read4.html">エピソード４</a></li>
+        </ul>
+      </li>
+       <li class="dropdown">
+       <a href="#" class="dropdown-toggle" data-toggle="dropdown">エネミーデータ<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="enemy1.html">エピソード１</a></li>
+          <li><a href="enemy2.html">エピソード２</a></li>
+          <li><a href="enemy4.html">エピソード４</a></li>
+		　<li><a href="reae.html">レアエネミー出現率</a></li>
+        </ul>
+      </li>
+       <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">アイテム<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="weapon.html">武器</a></li>
+         <li><a href="armor.html">鎧</a></li>
+         <li><a href="baria.html">盾</a></li>
+         <li><a href="unit.html">ユニット</a></li>
+         <li><a href="mag.html">マグ</a></li>
+         <li><a href="gousei.html">合成</a></li>
+        </ul>
+      </li>
+       <li><a href="gm.html">GM取引</a></li>
+    </ul>
+    
+    
+  </div><!-- /.navbar-collapse -->
+</nav>
+<div class="container" style="padding-top:100px;">
+<h2>鎧について</h2>
+<p>基礎的な鎧には種別として「フレーム」と「アーマー」が存在し、フレームは全職業が装備可能<br>
+アーマーはフォースのみ<span style="color:#b00">装備不可能</span>となっている。（レアアイテムについてはその限りではない）<br>
+鎧は防御力が高いものが多いが、その反面高い回避力や耐性を持つものは少ない。<br>
+鎧には「スロット」という「ユニット」を何個装備できるかというステータスを持っており、<br>
+最大4個までユニットを装着できる（ユニットの詳細はユニットページへ）<br>
+拾った時点でスロット数は決まっているが、アイテム「アドスロット」を使うことで拡張が可能である。<br>
+下記表中の<span style="color:#b00">防御力や回避力内の()数値は</span>、ドロップ時に付与される<span style="color:#b00">防御・回避力の振れ幅</span>である。<br>
+<span style="color:#b00">赤文字アイテム名はオリジナルアイテム。赤文字数値は原作より変更された数値を示す。</span>
+</p>
+<table class="table table-condensed table-hover table-striped">
+<thead>
+ <tr>
+  <th style="width: 250px">アイテム名</th>
+  <th style="width: 20px">必要LV</th>
+  <th style="width: 20px">レアリティ</th>
+  <th style="width: 100px">防御力</th>
+  <th style="width: 100px">回避力</th>
+  <th style="width: 100px">追加能力</th>
+  <th style="width: 20px">炎</th>
+  <th style="width: 20px">氷</th>
+  <th style="width: 20px">雷</th>
+  <th style="width: 20px">闇</th>
+  <th style="width: 20px">光</th>
+  <th style="width: 200px">備考</th>
+  <th style="width: 25px">Hmr</th>
+  <th style="width: 25px">Hnl</th>
+  <th style="width: 25px">Hct</th>
+  <th style="width: 25px">Hcl</th>
+  <th style="width: 25px">Rmr</th>
+  <th style="width: 25px">Rml</th>
+  <th style="width: 25px">Rct</th>
+  <th style="width: 25px">Rcl</th>
+  <th style="width: 25px">Fmr</th>
+  <th style="width: 25px">Fml</th>
+  <th style="width: 25px">Fnm</th>
+  <th style="width: 25px">Fnl</th>
+  </tr>
+  </thead>
+  <tbody>
+   <tr>
+  <td >■ フレーム</td>
+  <td >1</td>
+  <td >0</td>
+  <td >5(2)</td>
+  <td >5(2)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">5</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">0</td>
+  <td style="background: #FFD700;">5</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+ <tr>
+  <td >■ アーマー</td>
+  <td >4</td>
+  <td >0</td>
+  <td >7(2)</td>
+  <td >7(2)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">5</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">0</td>
+  <td style="background: #FFD700;">0</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  </tr>
+ <tr>
+  <td >■ サイアーマー</td>
+  <td >7</td>
+  <td >1</td>
+  <td >10(3)</td>
+  <td >10(2)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">5</td>
+  <td style="background: #DCDCDC;">0</td>
+  <td style="background: #FFD700;">0</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  </tr>
+ <tr>
+  <td >■ ギガフレーム</td>
+  <td >10</td>
+  <td >1</td>
+  <td >15(4)</td>
+  <td >12(2)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">4</td>
+  <td style="background: #DCDCDC;">0</td>
+  <td style="background: #FFD700;">0</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td >■ ソウルフレーム</td>
+  <td >13</td>
+  <td >2</td>
+  <td >20(4)</td>
+  <td >15(2)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">3</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">0</td>
+  <td style="background: #FFD700;"><span style="color:#b00">5</span></td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td >■ クロスアーマー</td>
+  <td >16</td>
+  <td >2</td>
+  <td >25(4)</td>
+  <td >17(2)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">3</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">5</td>
+  <td style="background: #FFD700;">10</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  </tr>
+ <tr>
+  <td >■ ソリッドフレーム</td>
+  <td >19</td>
+  <td >3</td>
+  <td >30(4)</td>
+  <td >20(2)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">3</td>
+  <td style="background: #DCDCDC;">0</td>
+  <td style="background: #FFD700;">10</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td >■ ブレイブアーマー</td>
+  <td >23</td>
+  <td >3</td>
+  <td >35(4)</td>
+  <td >22(2)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">4</td>
+  <td style="background: #00BFFF;">3</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">10</td>
+  <td style="background: #FFD700;">0</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  </tr>
+ <tr>
+  <td >■ ハイパーフレーム</td>
+  <td >27</td>
+  <td >4</td>
+  <td >40(4)</td>
+  <td >25(2)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">5</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">12</td>
+  <td style="background: #FFD700;">0</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td >■ グランドアーマー</td>
+  <td >31</td>
+  <td >4</td>
+  <td >45(4)</td>
+  <td >27(2)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">4</td>
+  <td style="background: #DCDCDC;">0</td>
+  <td style="background: #FFD700;">10</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  </tr>
+ <tr>
+  <td >■ ショックフレーム</td>
+  <td >35</td>
+  <td >5</td>
+  <td >50(4)</td>
+  <td >30(2)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">3</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;"><span style="color:#b00">15</span></td>
+  <td style="background: #DCDCDC;">6</td>
+  <td style="background: #FFD700;">6</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td >■ キングスフレーム</td>
+  <td >39</td>
+  <td >5</td>
+  <td >55(4)</td>
+  <td >32(2)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">3</td>
+  <td style="background: #DCDCDC;">10</td>
+  <td style="background: #FFD700;">14</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td >■ ドラゴンフレーム</td>
+  <td >43</td>
+  <td >6</td>
+  <td >60(4)</td>
+  <td >35(2)</td>
+  <td >-</td>
+  <td style="background: #DC143C;"><span style="color:#fff">15</span></td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">5</td>
+  <td style="background: #FFD700;"><span style="color:#b00">15</span></td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td >■ アブソーブアーマー</td>
+  <td >47</td>
+  <td >6</td>
+  <td >65(4)</td>
+  <td >37(2)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">3</td>
+  <td style="background: #00BFFF;">3</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">13</td>
+  <td style="background: #FFD700;">13</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  </tr>
+ <tr>
+  <td >■ プロテクトフレーム</td>
+  <td >51</td>
+  <td >7</td>
+  <td >70(4)</td>
+  <td >40(2)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">3</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">5</td>
+  <td style="background: #DCDCDC;">12</td>
+  <td style="background: #FFD700;">15</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td >■ ジェネラルアーマー</td>
+  <td >55</td>
+  <td >7</td>
+  <td >75(4)</td>
+  <td >42(2)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">5</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">20</td>
+  <td style="background: #FFD700;">0</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  </tr>
+ <tr>
+  <td >■ パーフェクトフレーム</td>
+  <td >59</td>
+  <td >7</td>
+  <td >80(4)</td>
+  <td >45(2)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">15</td>
+  <td style="background: #FFD700;">15</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td >■ ヴァリアントフレーム</td>
+  <td >63</td>
+  <td >7</td>
+  <td >85(4)</td>
+  <td >47(2)</td>
+  <td >-</td>
+  <td style="background: #DC143C;"><span style="color:#fff">10</span></td>
+  <td style="background: #00BFFF;"><span style="color:#b00">10</span></td>
+  <td style="background: #FFFF66;"><span style="color:#b00">10</span></td>
+  <td style="background: #DCDCDC;"><span style="color:#b00">0</span></td>
+  <td style="background: #FFD700;"><span style="color:#b00">0</span></td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td >■ インペリアルアーマー</td>
+  <td >67</td>
+  <td >8</td>
+  <td >90(4)</td>
+  <td >50(2)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">13</td>
+  <td style="background: #FFD700;">16</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  </tr>
+ <tr>
+  <td >■ ホーリーネスアーマー</td>
+  <td >71</td>
+  <td >8</td>
+  <td >95(4)</td>
+  <td >52(2)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">0</td>
+  <td style="background: #FFD700;">25</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  </tr>
+ <tr>
+  <td >■ ガーディアンアーマー</td>
+  <td >75</td>
+  <td >8</td>
+  <td >100(4)</td>
+  <td >55(2)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">18</td>
+  <td style="background: #FFD700;">16</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  </tr>
+ <tr>
+  <td >■ ディヴィニティアーマー</td>
+  <td >78</td>
+  <td >8</td>
+  <td >105(4)</td>
+  <td >57(2)</td>
+  <td >-</td>
+  <td style="background: #DC143C;"><span style="color:#fff">13</span></td>
+  <td style="background: #00BFFF;"><span style="color:#b00">13</span></td>
+  <td style="background: #FFFF66;"><span style="color:#b00">13</span></td>
+  <td style="background: #DCDCDC;"><span style="color:#b00">0</span></td>
+  <td style="background: #FFD700;"><span style="color:#b00">0</span></td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  </tr>
+ <tr>
+  <td >■ アルティメットフレーム</td>
+  <td >80</td>
+  <td >8</td>
+  <td >110(4)</td>
+  <td >60(2)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">18</td>
+  <td style="background: #FFD700;">18</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td >■ セレスティアルアーマー</td>
+  <td >85</td>
+  <td >8</td>
+  <td >120(10)</td>
+  <td >72(10)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">20</td>
+  <td style="background: #FFD700;">20</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> ＤＢの鎧</td>
+  <td >76</td>
+  <td >10</td>
+  <td >85(<span style="color:#b00">70</span>)</td>
+  <td >80(10)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">13</td>
+  <td style="background: #FFD700;">20</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> ＤＦフィールド</td>
+  <td >121</td>
+  <td >11</td>
+  <td >203(50)</td>
+  <td >116(20)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">17</td>
+  <td style="background: #FFD700;">22</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> ＤパーツＶｅｒ１．０１</td>
+  <td >51</td>
+  <td >10</td>
+  <td ><span style="color:#b00">80</span>(10)</td>
+  <td ><span style="color:#b00">55</span>(7)</td>
+  <td >攻撃力+<span style="color:#b00">10</span></td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">15</td>
+  <td style="background: #FFD700;">25</td>
+  <td >攻撃力+10</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> ＤパーツＶｅｒ２．１０</td>
+  <td >81</td>
+  <td >10</td>
+  <td ><span style="color:#b00">120</span>(10)</td>
+  <td >90(8)</td>
+  <td >攻撃力+<span style="color:#b00">20</span></td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">20</td>
+  <td style="background: #FFD700;">25</td>
+  <td >攻撃力+20</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> アトリビュートプレート</td>
+  <td >54</td>
+  <td >10</td>
+  <td >105(8)</td>
+  <td >85(8)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">5</td>
+  <td style="background: #00BFFF;">5</td>
+  <td style="background: #FFFF66;">5</td>
+  <td style="background: #DCDCDC;">20</td>
+  <td style="background: #FFD700;">25</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> イグニションクローク</td>
+  <td >99</td>
+  <td >10</td>
+  <td >168(8)</td>
+  <td >143(8)</td>
+  <td >-</td>
+  <td style="background: #DC143C;"><span style="color:#b00">20</span></td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">3</td>
+  <td style="background: #FFD700;">3</td>
+  <td >フォイエ1.2倍<br>ギフォイエ<br>ラフォイエ1.1倍</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN><span style="color:#b00">フェミーナフレーム</span></td>
+  <td >28</td>
+  <td >9</td>
+  <td >66(0)</td>
+  <td >60(0)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">0</td>
+  <td style="background: #FFD700;">30</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> エレクトロフレーム</td>
+  <td >122</td>
+  <td >10</td>
+  <td >196(50)</td>
+  <td >120(20)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">5</td>
+  <td style="background: #00BFFF;">5</td>
+  <td style="background: #FFFF66;"><span style="color:#b00">30</span></td>
+  <td style="background: #DCDCDC;">5</td>
+  <td style="background: #FFD700;">5</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> オーラフィールド</td>
+  <td >152</td>
+  <td >11</td>
+  <td >235(50)</td>
+  <td >134(20)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">20</td>
+  <td style="background: #FFD700;">20</td>
+  <td ><p>スピリットガーメントに魔石ムーラを使用することで入手</p>
+    <p>装備中徐々にTPが減少</p></td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> カースクローク</td>
+  <td >99</td>
+  <td >10</td>
+  <td >172(8)</td>
+  <td >146(8)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">3</td>
+  <td style="background: #00BFFF;">3</td>
+  <td style="background: #FFFF66;">3</td>
+  <td style="background: #DCDCDC;">18</td>
+  <td style="background: #FFD700;">0</td>
+  <td >メギド貫通</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> ガードウェイブ</td>
+  <td >101</td>
+  <td >11</td>
+  <td >173(5)</td>
+  <td >110(20)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">18</td>
+  <td style="background: #FFD700;">20</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> カスタムフレームＶｅｒ．００</td>
+  <td >76</td>
+  <td >10</td>
+  <td ><span style="color:#b00">130</span>(10)</td>
+  <td >85(10)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">13</td>
+  <td style="background: #FFD700;">18</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> カンギールクローク</td>
+  <td >99</td>
+  <td >10</td>
+  <td >168(8)</td>
+  <td >143(8)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">18</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">3</td>
+  <td style="background: #FFD700;">3</td>
+  <td >バータ1.2倍<br>ギバータ1.3倍<br>ラバータ1.1倍</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> グラビトンプレート</td>
+  <td >54</td>
+  <td >10</td>
+  <td ><span style="color:#b00">165</span>(8)</td>
+  <td >0(0)</td>
+  <td >命中力-10</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;"><span style="color: #b00;">0</span></td>
+  <td style="background: #FFD700;"><span style="color: #b00;">0</span></td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> クリムゾンコート</td>
+  <td >101</td>
+  <td >11</td>
+  <td >158(12)</td>
+  <td >136(12)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">10</td>
+  <td style="background: #00BFFF;">10</td>
+  <td style="background: #FFFF66;">10</td>
+  <td style="background: #DCDCDC;">14</td>
+  <td style="background: #FFD700;">14</td>
+  <td >赤のセイバー/赤のダガー/赤のスライサーとのセットで攻撃力1.5倍、命中力+22</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> <span style="color: #b00;">クロエのセーター</span></td>
+  <td >77</td>
+  <td >9</td>
+  <td >96(20)</td>
+  <td >96(20)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">30</td>
+  <td style="background: #00BFFF;">30</td>
+  <td style="background: #FFFF66;">30</td>
+  <td style="background: #DCDCDC;">30</td>
+  <td style="background: #FFD700;">30</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">◯</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">◯</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">◯</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> サーティーン</td>
+  <td >101</td>
+  <td >10</td>
+  <td >113(8)</td>
+  <td >136(8)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">2</td>
+  <td style="background: #00BFFF;">2</td>
+  <td style="background: #FFFF66;">2</td>
+  <td style="background: #DCDCDC;">16</td>
+  <td style="background: #FFD700;">8</td>
+  <td >暗殺者のスライサー/解放者のディスカ/勇者のディスカとのセットで攻撃力1.5倍、命中力+30、攻撃スピード+0.1</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> スウィートハート</td>
+  <td >131</td>
+  <td >11</td>
+  <td >176(50)</td>
+  <td >164(20)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">2</td>
+  <td style="background: #00BFFF;">2</td>
+  <td style="background: #FFFF66;">2</td>
+  <td style="background: #DCDCDC;">10</td>
+  <td style="background: #FFD700;">10</td>
+  <td >合成アイテム。2m以内に異性の人数により性能変化。ヴィヴィアンとのセットで攻撃スピード+0.3。エンジェルハープとのセットで攻撃力1.3倍、命中力+12。セーフティハートとのセットで防御力1.1倍、炎耐性/氷耐性/雷耐性+2、闇耐性/光耐性+5</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> スターキュイラス</td>
+  <td >111</td>
+  <td >10</td>
+  <td >250(20)</td>
+  <td >0(0)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">0</td>
+  <td style="background: #FFD700;">0</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> スピリットガーメント</td>
+  <td >71</td>
+  <td >10</td>
+  <td >100(7)</td>
+  <td >92(5)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">20</td>
+  <td style="background: #FFD700;">25</td>
+  <td >装備中徐々にTPが減少</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> スピリットキュイラス</td>
+  <td >98</td>
+  <td >10</td>
+  <td >122(7)</td>
+  <td >116(5)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">0</td>
+  <td style="background: #FFD700;">0</td>
+  <td >装備中TPが徐々に回復</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> スモーキングプレート</td>
+  <td >131</td>
+  <td >11</td>
+  <td >223(5)</td>
+  <td >122(20)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">5</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">20</td>
+  <td style="background: #FFD700;">25</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">×</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> セイクリッドクロス</td>
+  <td >144</td>
+  <td >11</td>
+  <td >100(50)</td>
+  <td >50(20)</td>
+  <td >-</td>
+  <td style="background: #DC143C;"><span style="color:#fff">20</span></td>
+  <td style="background: #00BFFF;"><span style="color:#b00">20</span></td>
+  <td style="background: #FFFF66;"><span style="color:#b00">20</span></td>
+  <td style="background: #DCDCDC;"><span style="color:#b00">35</span></td>
+  <td style="background: #FFD700;"><span style="color:#b00">40</span></td>
+  <td >麻痺無効</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> セレクトクローク</td>
+  <td >99</td>
+  <td >10</td>
+  <td >172(8)</td>
+  <td >146(8)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">3</td>
+  <td style="background: #00BFFF;">3</td>
+  <td style="background: #FFFF66;">3</td>
+  <td style="background: #DCDCDC;">0</td>
+  <td style="background: #FFD700;">18</td>
+  <td >グランツダメージ1.2倍</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> センスプレート</td>
+  <td >141</td>
+  <td >10</td>
+  <td ><span style="color: #b00;">125</span>(8)</td>
+  <td ><span style="color: #b00;">45</span>(8)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">20</td>
+  <td style="background: #FFD700;">25</td>
+  <td >トラップが見える</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> チューチューフィーバー</td>
+  <td >101</td>
+  <td >10</td>
+  <td >5(0)</td>
+  <td >5(0)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">0</td>
+  <td style="background: #FFD700;">0</td>
+  <td >チュウチュウにスピリットガーメントを使用することで入手</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> テンペストクローク</td>
+  <td >99</td>
+  <td >10</td>
+  <td >168(8)</td>
+  <td >143(8)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">18</td>
+  <td style="background: #DCDCDC;">3</td>
+  <td style="background: #FFD700;">3</td>
+  <td >ゾンデ1.2倍<br>ギゾンデ<br>ラゾンデダメージ1.1倍</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> トランスヴェスタイトプレート</td>
+  <td ><span style="color: #b00;">85</span></td>
+  <td >9</td>
+  <td ><span style="color: #b00;">100</span>(0)</td>
+  <td ><span style="color: #b00;">100</span>(0)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">70</td>
+  <td style="background: #FFD700;">0</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">×</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> ハンターフィールド</td>
+  <td >28</td>
+  <td >9</td>
+  <td >60(0)</td>
+  <td >80(0)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">20</td>
+  <td style="background: #FFD700;">15</td>
+  <td >&nbsp;</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> フォースフィールド</td>
+  <td >28</td>
+  <td >9</td>
+  <td >40(0)</td>
+  <td ><span style="color: #b00;">60</span>(0)</td>
+  <td >-</td>
+  <td style="background: #DC143C;"><span style="color: #b00;"></span>10</td>
+  <td style="background: #00BFFF;"><span style="color: #b00;"></span>10</td>
+  <td style="background: #FFFF66;"><span style="color: #b00;"></span>10</td>
+  <td style="background: #DCDCDC;">18</td>
+  <td style="background: #FFD700;">25</td>
+  <td >&nbsp;</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> ブライトネスサークル</td>
+  <td >111</td>
+  <td >11</td>
+  <td >190(50)</td>
+  <td >116(20)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">25</td>
+  <td style="background: #FFD700;">20</td>
+  <td >スピリットガーメントにスターアンプを使用することで入手</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> ブラックハウンドキュイラス</td>
+  <td >121</td>
+  <td >10</td>
+  <td >300(0)</td>
+  <td >-200(0)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">2</td>
+  <td style="background: #00BFFF;">2</td>
+  <td style="background: #FFFF66;">2</td>
+  <td style="background: #DCDCDC;">2</td>
+  <td style="background: #FFD700;">2</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> フレイムガーメント</td>
+  <td >101</td>
+  <td >11</td>
+  <td >180(50)</td>
+  <td >114(20)</td>
+<!--
+  <td >206(0)</td>
+  <td >124(0)</td>
+-->
+  <td >-</td>
+  <td style="background: #DC143C;"><span style="color:#b00">23</span></td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">0</td>
+  <td style="background: #FFD700;">0</td>
+<!--
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">15</td>
+  <td style="background: #FFD700;">15</td>
+-->
+  <!--
+  <td >説明装備者の体力を徐々に奪い、エネルギーに変換することで極めて高い防御力を発揮する特殊防具。</td>
+-->
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> フロウウェンの鎧</td>
+  <td >76</td>
+  <td >10</td>
+  <td >82(10)</td>
+  <td >72(<span style="color:#b00">70</span>)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">15</td>
+  <td style="background: #FFD700;">18</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> マザーガーブ</td>
+  <td >101</td>
+  <td >11</td>
+  <td >165(0)</td>
+  <td >85(0)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">18</td>
+  <td style="background: #FFD700;">18</td>
+  <td >TP消費半減、時々グランツダメージ1.1倍</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">×</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> <span style="color: #b00;">ヘミスフェリオ</span></td>
+  <td >131</td>
+  <td >12</td>
+  <td >135(0)</td>
+  <td >95(0)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">0</td>
+  <td style="background: #FFD700;">0</td>
+  <td >TP消費半減、時々グランツダメージ1.3倍</td>
+  <td style="background: #CCFFFF;">◯</td>
+  <td style="background: #FFCCFF;">◯</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">◯</td>
+  <td style="background: #FFCCFF;">◯</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">◯</td>
+  <td style="background: #FFCCFF;">◯</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">◯</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> モーニングプレイヤー</td>
+  <td >101</td>
+  <td >10</td>
+  <td >120(0)</td>
+  <td >140(0)</td>
+  <td >-</td>
+  <td style="background: #DC143C;"><span style="color: #fff;">10</span></td>
+  <td style="background: #00BFFF;"><span style="color: #b00;">10</span></td>
+  <td style="background: #FFFF66;"><span style="color: #b00;">10</span></td>
+  <td style="background: #DCDCDC;"><span style="color: #b00;">10</span></td>
+  <td style="background: #FFD700;">20</td>
+  <td >モーニンググローリーとのセットで攻撃力+150、命中力+10、攻撃スピード+0.2</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> ラブハート</td>
+  <td >131</td>
+  <td >11</td>
+  <td >196(50)</td>
+  <td >140(20)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">17</td>
+  <td style="background: #FFD700;">20</td>
+  <td >スピリットガーメントに魔石ハートキーを使用することで入手</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> リバイバルガーメント</td>
+  <td >58</td>
+  <td >10</td>
+  <td ><span style="color:#b00">95</span>(5)</td>
+  <td ><span style="color:#b00">70</span>(10)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">18</td>
+  <td style="background: #FFD700;">20</td>
+  <td >装備中HPが徐々に回復</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> リバイバルキュイラス</td>
+  <td >101</td>
+  <td >10</td>
+  <td ><span style="color: #b00;">154</span>(5)</td>
+  <td >94(10)</td>
+  <td >-</td>
+  <td style="background: #DC143C;"><span style="color: #fff;">3</span></td>
+  <td style="background: #00BFFF;"><span style="color: #b00;">3</span></td>
+  <td style="background: #FFFF66;"><span style="color: #b00;">3</span></td>
+  <td style="background: #DCDCDC;"><span style="color: #b00;">3</span></td>
+  <td style="background: #FFD700;"><span style="color: #b00;">3</span></td>
+  <td >装備中HPが徐々に回復</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> ルミナスフィールド</td>
+  <td >101</td>
+  <td >11</td>
+  <td >206(50)</td>
+  <td >124(20)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">15</td>
+  <td style="background: #FFD700;">15</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> レッドコート</td>
+  <td >101</td>
+  <td >10</td>
+  <td >152(10)</td>
+  <td >131(10)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">8</td>
+  <td style="background: #00BFFF;">8</td>
+  <td style="background: #FFFF66;">8</td>
+  <td style="background: #DCDCDC;">12</td>
+  <td style="background: #FFD700;">12</td>
+  <td >赤のセイバー/赤のダガー/赤のスライサーとのセットで攻撃力1.3倍、命中力+15</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> レンジャーフィールド</td>
+  <td >28</td>
+  <td >9</td>
+  <td >50(0)</td>
+  <td >80(0)</td>
+  <td >-</td>
+  <td style="background: #DC143C;"><span style="color: #fff;">5</span></td>
+  <td style="background: #00BFFF;"><span style="color: #b00;">5</span></td>
+  <td style="background: #FFFF66;"><span style="color: #b00;">5</span></td>
+  <td style="background: #DCDCDC;">18</td>
+  <td style="background: #FFD700;">20</td>
+  <td >&nbsp;</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN><span style="color:#b00"> インパルスメイル</span></td>
+  <td >36</td>
+  <td >9</td>
+  <td >75(0)</td>
+  <td >64(0)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">30</td>
+  <td style="background: #FFD700;">0</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">×</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> 寄生防具「ヴァジュラ」</td>
+  <td >89</td>
+  <td >12</td>
+  <td >155(0)</td>
+  <td >100(0)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">20</td>
+  <td style="background: #FFD700;">0</td>
+  <td ><p>寄生防具「ネルガル」にD型寄生細胞を使用することで入手</p>
+    <p>装備中HPが急速に減少</p></td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> 寄生防具「デ・ロル」</td>
+  <td >54</td>
+  <td >10</td>
+  <td ><span style="color:#b00">90</span>(0)</td>
+  <td ><span style="color:#b00">80</span>(0)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">20</td>
+  <td style="background: #FFD700;">0</td>
+  <td ><p>匂う鎧にD型寄生細胞を使用することで入手</p>
+    <p>装備中HPが徐々に減少</p></td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> 寄生防具「ネルガル」</td>
+  <td >66</td>
+  <td >11</td>
+  <td ><span style="color:#b00">115</span>(0)</td>
+  <td ><span style="color:#b00">90</span>(0)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">20</td>
+  <td style="background: #FFD700;">0</td>
+  <td ><p>寄生防具「デ・ロル」にD型寄生細胞を使用することで入手</p>
+    <p>装備中HPが徐々に減少</p></td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> 空間機動歩兵外套</td>
+  <td >76</td>
+  <td >10</td>
+  <td >92(10)</td>
+  <td ><span style="color:#b00">106</span>(10)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">2</td>
+  <td style="background: #00BFFF;">2</td>
+  <td style="background: #FFFF66;">2</td>
+  <td style="background: #DCDCDC;">6</td>
+  <td style="background: #FFD700;">6</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> 空間機動歩兵第３２分隊上等兵軍服</td>
+  <td >91</td>
+  <td >10</td>
+  <td >118(12)</td>
+  <td ><span style="color:#b00">115</span>(8)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">1</td>
+  <td style="background: #00BFFF;">1</td>
+  <td style="background: #FFFF66;">1</td>
+  <td style="background: #DCDCDC;">8</td>
+  <td style="background: #FFD700;">6</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> 空間機動歩兵第３２分隊中尉軍服</td>
+  <td >101</td>
+  <td >10</td>
+  <td >168(18)</td>
+  <td ><span style="color:#b00">132</span>(16)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">3</td>
+  <td style="background: #00BFFF;">3</td>
+  <td style="background: #FFFF66;">3</td>
+  <td style="background: #DCDCDC;">12</td>
+  <td style="background: #FFD700;">8</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> 空間機動歩兵中尉外套</td>
+  <td >101</td>
+  <td >10</td>
+  <td >195(21)</td>
+  <td ><span style="color:#b00">136</span>(18)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">6</td>
+  <td style="background: #00BFFF;">6</td>
+  <td style="background: #FFFF66;">6</td>
+  <td style="background: #DCDCDC;">16</td>
+  <td style="background: #FFD700;">12</td>
+  <td >トラップが見える。</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> 黒糸威朱塗桶側二枚胴</td>
+  <td >135</td>
+  <td >10</td>
+  <td >128(0)</td>
+  <td >143(0)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">5</td>
+  <td style="background: #00BFFF;">5</td>
+  <td style="background: #FFFF66;">5</td>
+  <td style="background: #DCDCDC;">5</td>
+  <td style="background: #FFD700;">5</td>
+  <td >攻撃スピード+0.3（ゴッド/バトル相当）</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> 黒糸威胴丸</td>
+  <td ><span style="color:#b00">61</span></td>
+  <td >10</td>
+  <td ><span style="color:#b00">83</span>(0)</td>
+  <td ><span style="color:#b00">62</span>(0)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">1</td>
+  <td style="background: #00BFFF;">1</td>
+  <td style="background: #FFFF66;">1</td>
+  <td style="background: #DCDCDC;">1</td>
+  <td style="background: #FFD700;">1</td>
+  <td >攻撃スピード+0.2（デビル/バトル相当）<br /></td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> 紺糸威紫塗桶側二枚胴</td>
+  <td >150</td>
+  <td >12</td>
+  <td >156(0)</td>
+  <td >181(0)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">8</td>
+  <td style="background: #00BFFF;">8</td>
+  <td style="background: #FFFF66;">8</td>
+  <td style="background: #DCDCDC;">8</td>
+  <td style="background: #FFD700;">8</td>
+  <td >攻撃スピード+0.4（ヘヴンリー/バトル相当）。ヤシャ/サンゲ/カムイ/サンゲヤシャとのセットで命中力+10、攻撃力+100</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> 細菌防具「ラフテリア」</td>
+  <td >156</td>
+  <td >12</td>
+  <td >240(50)</td>
+  <td >90(20)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">15</td>
+  <td style="background: #FFD700;">15</td>
+  <td >寄生防具「ヴァジュラ」にD型寄生細胞を使用することで入手</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> 赤糸威胴丸</td>
+  <td >101</td>
+  <td >10</td>
+  <td >112(0)</td>
+  <td >108(0)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">2</td>
+  <td style="background: #00BFFF;">2</td>
+  <td style="background: #FFFF66;">2</td>
+  <td style="background: #DCDCDC;">2</td>
+  <td style="background: #FFD700;">2</td>
+  <td >攻撃スピード+0.2（デビル/バトル相当)<br /></td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> 浅黄絲威褄取鎧</td>
+  <td >80</td>
+  <td >10</td>
+  <td >121(0)</td>
+  <td >102(0)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">0</td>
+  <td style="background: #FFD700;">0</td>
+  <td >アギトと同時に装備すると命中力＋20、攻撃力１．３倍<br />
+    攻撃スピード+0.3（ゴッド/バトル相当）</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> 匂う鎧</td>
+  <td >54</td>
+  <td >10</td>
+  <td >40(85)</td>
+  <td >15(85)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">22</td>
+  <td style="background: #FFD700;">0</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> 連盟親衛隊軍服</td>
+  <td >76</td>
+  <td >10</td>
+  <td ><span style="color:#b00">118</span>(12)</td>
+  <td >0(0)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">5</td>
+  <td style="background: #FFD700;">0</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> 連盟親衛隊指揮官軍服</td>
+  <td >101</td>
+  <td >10</td>
+  <td ><span style="color:#b00">198</span>(16)</td>
+  <td >85(0)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">25</td>
+  <td style="background: #FFD700;">0</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">×</td>
+  <td style="background: #FFCCFF;">×</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+ <tr>
+  <td ><SPAN style="color: #CCCC00;">■</SPAN> 連盟親衛隊上等兵軍服</td>
+  <td >89</td>
+  <td >10</td>
+  <td ><span style="color:#b00">144</span>(14)</td>
+  <td >0(0)</td>
+  <td >-</td>
+  <td style="background: #DC143C;">0</td>
+  <td style="background: #00BFFF;">0</td>
+  <td style="background: #FFFF66;">0</td>
+  <td style="background: #DCDCDC;">20</td>
+  <td style="background: #FFD700;">0</td>
+  <td >-</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  <td style="background: #CCFFFF;">○</td>
+  <td style="background: #FFCCFF;">○</td>
+  </tr>
+  <tr>
+   <td ><SPAN style="color: #CCCC00;">■</SPAN><span style="color:#b00">クワルキエラ</span></td>
+   <td >50</td>
+   <td >11</td>
+   <td >100(85)</td>
+   <td >60(85)</td>
+   <td >全ステータス+5</td>
+   <td style="background: #DC143C;">10</td>
+   <td style="background: #00BFFF;">10</td>
+   <td style="background: #FFFF66;">10</td>
+   <td style="background: #DCDCDC;">10</td>
+   <td style="background: #FFD700;">10</td>
+   <td >-</td>
+   <td style="background: #CCFFFF;">○</td>
+   <td style="background: #FFCCFF;">○</td>
+   <td style="background: #CCFFFF;">○</td>
+   <td style="background: #FFCCFF;">○</td>
+   <td style="background: #CCFFFF;">○</td>
+   <td style="background: #FFCCFF;">○</td>
+   <td style="background: #CCFFFF;">○</td>
+   <td style="background: #FFCCFF;">○</td>
+   <td style="background: #CCFFFF;">○</td>
+   <td style="background: #FFCCFF;">○</td>
+   <td style="background: #CCFFFF;">○</td>
+   <td style="background: #FFCCFF;">○</td>
+   </tr>
+   <tr>
+    <td ><SPAN style="color: #CCCC00;">■</SPAN><span style="color:#b00">ステルススーツ</span></td>
+    <td ><span style="color:#b00">140</span></td>
+    <td >12</td>
+    <td >1(0)</td>
+    <td >300(25)</td>
+    <td >-</td>
+    <td style="background: #DC143C;">0</td>
+    <td style="background: #00BFFF;">0</td>
+    <td style="background: #FFFF66;">0</td>
+    <td style="background: #DCDCDC;">0</td>
+    <td style="background: #FFD700;">0</td>
+    <td >-</td>
+    <td style="background: #CCFFFF;">×</td>
+    <td style="background: #FFCCFF;">×</td>
+    <td style="background: #CCFFFF;">×</td>
+    <td style="background: #FFCCFF;">×</td>
+    <td style="background: #CCFFFF;">×</td>
+    <td style="background: #FFCCFF;">○</td>
+    <td style="background: #CCFFFF;">×</td>
+    <td style="background: #FFCCFF;">×</td>
+    <td style="background: #CCFFFF;">×</td>
+    <td style="background: #FFCCFF;">×</td>
+    <td style="background: #CCFFFF;">×</td>
+    <td style="background: #FFCCFF;">×</td>
+    </tr>
+    <tr>
+     <td ><SPAN style="color: #CCCC00;">■</SPAN><span style="color:#b00">ミラージュスーツ</span></td>
+     <td >120</td>
+     <td >11</td>
+     <td >1(0)</td>
+     <td >220(20)</td>
+     <td >-</td>
+     <td style="background: #DC143C;">0</td>
+     <td style="background: #00BFFF;">0</td>
+     <td style="background: #FFFF66;">0</td>
+     <td style="background: #DCDCDC;">0</td>
+     <td style="background: #FFD700;">0</td>
+     <td >-</td>
+     <td style="background: #CCFFFF;">○</td>
+     <td style="background: #FFCCFF;">○</td>
+     <td style="background: #CCFFFF;">○</td>
+     <td style="background: #FFCCFF;">○</td>
+     <td style="background: #CCFFFF;">○</td>
+     <td style="background: #FFCCFF;">○</td>
+     <td style="background: #CCFFFF;">○</td>
+     <td style="background: #FFCCFF;">○</td>
+     <td style="background: #CCFFFF;">○</td>
+     <td style="background: #FFCCFF;">○</td>
+     <td style="background: #CCFFFF;">○</td>
+     <td style="background: #FFCCFF;">○</td>
+     </tr>
+</tbody>
+</table>
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
